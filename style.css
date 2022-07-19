@@ -8,7 +8,13 @@ body{
     gap: 8px;
 }
 
-
+.containerBody{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    flex: 1;
+}
 #container{
     display: flex;
     justify-content: center;
@@ -18,7 +24,6 @@ body{
     height: 600px;
     width: 600px;
     flex-wrap: wrap;
-    gap: 8;
     
 }
 
@@ -39,4 +44,13 @@ body{
 .random{
     color: white;
     background-color: grey;
+}
+
+.header{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 100px;
+}
+
+.footer{
+    display: flex;
 }

@@ -12,6 +12,7 @@ function setGridSize(gridAmount){
         container.appendChild(divs)
         divs.classList.add("grid")
         divs.setAttribute("style",`height:${gridSize}px;width:${gridSize}px`);
+        divs.style.backgroundColor = "white";
     }
     grid = document.getElementsByClassName('grid')
 
