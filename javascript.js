@@ -25,23 +25,26 @@ function setGridSize(gridAmount){
     }
 }
 
-let randomC = 1
+let randomC = false
 function ran(){
-    if (randomC == 0){
+    const btnRandomColor = document.querySelector('.btnRandomColor')
+    if (randomC == true){
+        btnRandomColor.classList.remove('random')
 
-        return randomC = 1;
+        return randomC = false;
     }else{
-    return randomC = 0;
+            btnRandomColor.classList.add('random')
+    return randomC = true;
     }
 }
 function mouseOver(){
     
     const boxes = document.querySelectorAll('.grid')
     boxes.forEach((div) => {
-        if(randomC == 1){
+        if(randomC == false){
             event.target.style.backgroundColor = "black";
             }
-        else if (randomC == 0){
+        else if (randomC == true){
             const color = Math.floor(Math.random()*16777215).toString(16);
             event.target.style.backgroundColor = "#" + color;
         }
@@ -58,6 +61,9 @@ btnSize.addEventListener("click", changeSize)
 const btnRandomColor = document.querySelector('.btnRandomColor')
 btnRandomColor.addEventListener("click", ran)
 
+const btnReset = document.querySelector('.btnReset')
+btnReset.addEventListener("click", resetGrid)
+
 function changeSize(){
     const boxes = document.querySelectorAll('.grid')
     boxes.forEach((div) => {
@@ -71,9 +77,16 @@ function changeSize(){
     setGridSize(gridAmount);
 }
 
-function changeColor(){
+
+function resetGrid(){
+   const boxes = document.querySelectorAll('.grid');
+   boxes.forEach((div) => {
+       div.style.backgroundColor="white";
+
+   })
     
 }
+
 
 setGridSize(16);
 
