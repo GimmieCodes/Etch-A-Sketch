@@ -26,3 +26,10 @@ body{
     border-style: solid;
     border-width: thin;
 }
+
+.btnContainer{
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    gap: 8px;
+}

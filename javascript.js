@@ -20,7 +20,8 @@ function setGridSize(gridAmount){
     
     }
     }else{
-        prompt("Please choose a number between 1-100")
+        
+        changeSize();
     }
 }
 
@@ -64,6 +65,9 @@ function changeSize(){
     });
     
     let gridAmount = prompt("Set grid size", )
+    if (gridAmount > 100 || gridAmount < 1){
+        gridAmount = prompt("Please choose a size between 1-100", )
+    }
     setGridSize(gridAmount);
 }
 
